@@ -1,15 +1,17 @@
-RewriteEngine On
+<IfModule mod_rewrite.c>
+  RewriteEngine On
 
-RewriteBase /public/
+  RewriteBase /public/
 
-# ROUTER WWW Redirect.
-#RewriteCond %{HTTP_HOST} !^www\. [NC]
-#RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L]
+  # ROUTER WWW Redirect.
+  #RewriteCond %{HTTP_HOST} !^www\. [NC]
+  #RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L]
 
-# ROUTER HTTPS Redirect
-#RewriteCond %{HTTP:X-Forwarded-Proto} !https
-#RewriteCond %{HTTPS} off
-#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L]
+  # ROUTER HTTPS Redirect
+  #RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  #RewriteCond %{HTTPS} off
+  #RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L]
 
-# General rewriting
-RewriteRule ^(.*)$ /public/index.php?route=/$1 [L,QSA]
+  # General rewriting
+  RewriteRule ^(.*)$ /public/index.php?route=/$1 [L,QSA]
+</IfModule>
