@@ -13,6 +13,33 @@ Configure the application env
 cp .env.example .env
 ```
 
+Set the .htaccess (apache file config)
+```bash
+cp .htaccess.example .htaccess
+```
+
+Default ```.htacess``` file
+```htaccess
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Don't change it.
+  RewriteBase /public/
+
+  # ROUTER WWW Redirect. (If you want WWW redirection)
+  #RewriteCond %{HTTP_HOST} !^www\. [NC]
+  #RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L]
+
+  # ROUTER HTTPS Redirect (If you want HTTPS redirection)
+  #RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  #RewriteCond %{HTTPS} off
+  #RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L]
+
+  # General route rewriting
+  RewriteRule ^(.*)$ /public/index.php?route=/$1 [L,QSA]
+</IfModule>
+```
+
 Create a simple page
 
 Go to ```app/routes.php```
