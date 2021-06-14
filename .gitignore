@@ -1,0 +1,14 @@
+# Ignore files
+
+.env
+.htaccess
+composer.lock
+
+.vscode/
+vendor/
+
+tmp/*
+!tmp/.gitkeep
+
+app/Migrations/*
+!app/Migrations/.gitkeep

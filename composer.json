@@ -1,0 +1,7 @@
+{
+  "require": {
+    "coffeecode/router": "^1.0",
+    "vlucas/phpdotenv": "^5.3",
+    "twig/twig": "^3.3"
+  }
+}

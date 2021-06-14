@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+	<title>{{ app.title }}</title>
+	<link href="{{ app.url }}/public/assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="{{ app.url }}/public/assets/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="{{ app.url }}/public/assets/css/main.min.css" rel="stylesheet" />
+  {% block header %}{% endblock %}
+</head>
+<body>
+
+{% block content %}{% endblock %}
+
+<script src="{{ app.url }}/public/assets/js/jquery-3.6.0.min.js"></script>
+<script src="{{ app.url }}/public/assets/js/bootstrap.bundle.min.js"></script>
+
+{% block js %}{% endblock %}
+
+</body>
+</html>
