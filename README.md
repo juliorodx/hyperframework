@@ -8,6 +8,7 @@ composer update
 ```
 
 Create a simple page
+
 Go to ```app/routes.php```
 
 ```php
@@ -31,7 +32,21 @@ public function customMethod()
 
 Go to ```app/Views/customTemplate.twig```
 
-And add edit your page.
+And add edit your page. (Example extending to layouts/main.twig)
+
+```twig
+{% extends 'layouts/main.twig' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+  Your content here
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+```
 
 Now, access your server, example: http://localhost/custom-route
 
