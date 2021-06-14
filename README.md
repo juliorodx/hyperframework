@@ -7,6 +7,12 @@ Clone this repo.
 composer update
 ```
 
+Configure the application env
+
+```bash
+cp .env.example .env
+```
+
 Create a simple page
 
 Go to ```app/routes.php```
