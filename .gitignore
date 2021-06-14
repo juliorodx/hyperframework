@@ -1,11 +1,11 @@
 # Ignore files
 
-.env
-.htaccess
-composer.lock
+/.env
+/.htaccess
+/composer.lock
 
 .vscode/
-vendor/
+/vendor/
 
 tmp/*
 !tmp/.gitkeep
